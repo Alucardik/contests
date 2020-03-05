@@ -24,7 +24,7 @@ int main() {
     Polynomial<int> p1(v1), p2(42), p3, p4(v2.begin()+2, v2.end()), p5(v3), p6(v4),
         p7(v3.rbegin()+1, v3.rend()), p8(v1.begin(), v1.begin()+7), p0(v0), p10(v5);
 
-    std::cout << "p1 = 2*x^6+x^5+x^4-x^3+2*x^2+9*x\np2 = 42\np3 = 0\np4 = 2*x^4+x+1\np5 = 3*x^2+2*x+1\np6 = 2*x+1\np7 = x+2\np8 = 2*x^6+^5+x^4-x^3+2*x^2+9*x\n\n";
+    std::cout << "p1 = 2*x^6+x^5+x^4-x^3+2*x^2+9*x\np2 = 42\np3 = 0\np4 = 2*x^4+x+1\np5 = 3*x^2+2*x+1\np6 = x+2\np7 = x+2\np8 = 2*x^6+^5+x^4-x^3+2*x^2+9*x\n\n";
 
     std::cout << "p6[20] = " << p6[20] << "\n\n";
     std::cout << "p3[0] = " << p3[0] << "\n\n";
