@@ -24,8 +24,7 @@ int main() {
     Polynomial<int> p1(v1), p2(42), p3, p4(v2.begin()+2, v2.end()), p5(v3), p6(v4),
         p7(v3.rbegin()+1, v3.rend()), p8(v1.begin(), v1.begin()+7), p0(v0), p10(v5);
 
-    std::cout << "p1 = 2*x^6+x^5+x^4-x^3+2*x^2+9*x\np2 = 42\np3 = 0\np4 = 2*x^4+x+1\np5 = 3*x^2+2*x+1\np6 = x+2\np7 = x+2\np8 = 2*x^6+^5+x^4-x^3+2*x^2+9*x\n\n";
-
+       std::cout << "p1 = 2x^6+x^5+x^4-x^3+2x^2+9x\np2 = 42\np3 = 0\np4 = 2x^4+x+1\np5 = 3x^2+2x+1\np6 = x+2\np7 = x+2\np8 = 2x^6+x^5+x^4-x^3+2x^2+9x\n\n";
     std::cout << "p6[20] = " << p6[20] << "\n\n";
     std::cout << "p3[0] = " << p3[0] << "\n\n";
     std::cout << "p1[2] = " << p1[2] << "\n\n";
@@ -41,11 +40,19 @@ int main() {
     std::cout << "p1: "; print(p1);
     std::cout << "p2: "; printIt(p2);
     std::cout << "p1 + p2: "; print(p1 + p2);
+    p1 += p2;
+    std::cout << "p1 += p2: "; print(p1);
+    p1 -= p2;
+    std::cout << "p1 -= p2: == p1 "; print(p1);
     std::cout << "\n";
 
     std::cout << "p4: "; print(p4);
     std::cout << "p4+2: "; print(p4+2);
     std::cout << "2+p4: "; print(2+p4);
+    p4 += 2;
+    std::cout << "p4 += 2: "; print(p4);
+    p4 -= 2;
+    std::cout << "p4 -= 2: "; print(p4);
     std::cout << "p4: "; print(p4);
     std::cout << "\n";
 
@@ -53,6 +60,10 @@ int main() {
     std::cout << "p5: "; print(p5);
     std::cout << "p5+p3: "; print(p5+p3);
     std::cout << "p3+p5: "; print(p3+p5);
+    p3 -= p5;
+    std::cout << "p3 -= p5 == -p5 "; print(p3);
+    p3 += p5;
+    std::cout << "p3 += p5 == 0 "; print(p3);
     std::cout << "p3: "; print(p3);
     std::cout << "p5: "; print(p5);
     std::cout << "\n";
