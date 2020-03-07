@@ -111,5 +111,12 @@ int main() {
     Polynomial<int> out1(o1), out2 = -1 * out1;
     std::cout << "-x^5+x^4+4*x^3+3*x^2+2*x+1 = " << out1 << "\n\n";
     std::cout << "x^5-x^4-4*x^3-3*x^2-2*x-1 = " << out2 << "\n\n";
+    
+    std::cout << "p4(p6) = 2*x^4+16*x^3+48*x^2+65*x+35\n " << (p4 & p6) << std::endl;
+    std::cout << "p6(p4) = 2*x^4+x+3\n" << (p6 & p4) << std::endl;
+    std::cout << "p3(p4) = 0\n" << (p3 & p4) << std::endl;
+    std::cout << "p1(p3) = 0\n" << (p3 & p4) << std::endl;
+    std::cout << "p1(p4) = 128*x^24+384*x^21+416*x^20+480*x^18+1040*x^17+576*x^16+320*x^15+1040*x^14+1152*x^13+544*x^12+520*x^11+864*x^10+660*x^9+310*x^8+288*x^7+320*x^6+193*x^5+98*x^4+53*x^3+45*x^2+31*x+14\n"
+    << (p1 & p4) << std::endl;
 }
 
