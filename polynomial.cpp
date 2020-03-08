@@ -41,9 +41,11 @@ int main() {
 
     std::cout << "p3: 0 = "; printIt(p3);
     std::cout << "p11: 0 = "; printIt(p11);
+    std::cout << "\n";
 
     auto p9 = p1 - p1;
     std::cout << "p9 = p1 - p1: "; print(p9);
+    std::cout << "\n";
 
     std::cout << "p1: "; print(p1);
     std::cout << "p2: "; printIt(p2);
