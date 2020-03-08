@@ -120,5 +120,7 @@ int main() {
     Polynomial<int> out1(o1), out2 = -1 * out1;
     std::cout << "-x^5+x^4+4*x^3+3*x^2+2*x+1 = " << out1 << "\n\n";
     std::cout << "x^5-x^4-4*x^3-3*x^2-2*x-1 = " << out2 << "\n\n";
+
+    #include "composition.h"
 }
 
