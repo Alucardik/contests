@@ -2,6 +2,10 @@
 
 template <typename T>
 void printIt(const Polynomial<T>& p) {
+    if (p.begin() == p.end()) {
+        std::cout << "0\n";
+        return;
+    }
     for (auto it = p.begin(); it != p.end(); ++it)
         std::cout << *it << " ";
     std::cout << "\n";
@@ -22,7 +26,7 @@ int main() {
     std::vector<int> v1={0, 9, 2, -1, 1, 1, 2, 0, 0, 0}, v2={-1, 2, 1, 1, 0, 0, 2},
         v3={1, 2, 3}, v4={2, 1}, v0={0,0,0,0,0,0,0}, v5={0, 0, 0, 0, -2};
     Polynomial<int> p1(v1), p2(42), p3, p4(v2.begin()+2, v2.end()), p5(v3), p6(v4),
-        p7(v3.rbegin()+1, v3.rend()), p8(v1.begin(), v1.begin()+7), p0(v0), p10(v5);
+        p7(v3.rbegin()+1, v3.rend()), p8(v1.begin(), v1.begin()+7), p0(v0), p10(v5), p11(0);
 
     std::cout << "p1 = 2*x^6+x^5+x^4-x^3+2*x^2+9*x\np2 = 42\np3 = 0\np4 = 2*x^4+x+1\np5 = 3*x^2+2*x+1\np6 = x+2\np7 = x+2\np8 = 2*x^6+^5+x^4-x^3+2*x^2+9*x\n\n";
 
@@ -34,6 +38,9 @@ int main() {
     std::cout << "p3 == p7: 0\n" << (p3 == p7) << "\n\n";
     std::cout << "p1 == p4: 0\n" << (p1 == p4) << "\n\n";
     std::cout << "p1 == p8: 1\n" << (p1 == p8) << "\n\n";
+
+    std::cout << "p3: 0 = "; printIt(p3);
+    std::cout << "p11: 0 = "; printIt(p11);
 
     auto p9 = p1 - p1;
     std::cout << "p9 = p1 - p1: "; print(p9);
